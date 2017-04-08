@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>高升管理平台</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style/css/vendor/bootstrap/dist/bootstrap.css">
+    <link rel="stylesheet" href="./style/css/vendor/Animate.css">
+    <link rel="stylesheet" href="./style/css/basic.css">
+    <link rel="stylesheet" href="./style/css/vendor/font_awesome/css/font-awesome.css">
+    <!--[if lt IE 9]>
+    <script src="./style/js/vendor/html5shiv.min.js"></script>
+    <script src="./style/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="container">
+    <form class="form-signin" method="get" action="">
+        <div class="logo animated bounceIn"><img src="logo.png"/></div>
+        <h3>中国领先的云基础服务提供商</h3>
+        <div class="form-group">
+            <!--[if lt IE 9]><label>用户名</label><![endif]-->
+            <input type="text" class="form-control" placeholder="用户名" required="required" autofocus="autofocus">
+        </div>
+        <div class="form-group">
+            <!--[if lt IE 9]><label>密码</label><![endif]-->
+            <input type="password" class="form-control" placeholder="密码" required="required">
+        </div>
+        <div class="form-group" style="position:relative;">
+            <!--[if lt IE 9]><label>验证码</label><![endif]-->
+            <input type="password" class="form-control" placeholder="验证码" required="required">
+            <div class="J_verify_code" style="cursor:pointer;position:absolute;top:8px;right:6px;">
+                <img src="./style/images/code.png"/>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block subBtn" type="submit">登录</button>
+        <div class="help"><i class="fa fa-lightbulb-o"></i> 此为静态演示，可以直接<a href="#/"><b>进入后台(建设中)</b></a></div>
+        <div class="copyright"><i class="fa fa-copyright"></i><a href="https://github.com/MengjieLee/">MengjieLee</a></div>
+    </form>
+</div>
+<div class="bolang1 footimg" style="bottom: -30.8598px;"></div>
+<div class="bolang2 footimg" style="bottom: -0.831503px;"></div>
+
+
+<script src="./style/js/vendor/jquery.min.js"></script>
+<script src="./style/js/vendor/bootstrap/dist/bootstrap.js"></script>
+<script src="./style/js/vendor/ie10-viewport-bug-workaround.js"></script>
+<script src="./style/js/vendor/jquery.easing.js"></script>
+<script>
+ var yueAnimate = {
+        lbyFun: function () {
+            $(".bolang1").css({ "bottom": "-36px" });
+            $(".bolang2").css({ "bottom": "0" });
+            $(".bolang1").animate({
+                "bottom": "0"
+            }, 1500, 'easeInCubic');
+            $(".bolang1").animate({
+                "bottom": "-36px"
+            }, 1500, 'easeInCubic');
+
+            $(".bolang1").animate({
+                "bottom": "0"
+            }, 1500, 'easeInCubic');
+            $(".bolang1").animate({
+                "bottom": "-36px"
+            }, 1500, 'easeInCubic');
+
+            $(".bolang2").animate({
+                "bottom": "-24px"
+            }, 1000, 'easeInCubic');
+            $(".bolang2").animate({
+                "bottom": "0"
+            }, 1000, 'easeInCubic');
+
+            $(".bolang2").animate({
+                "bottom": "-24px"
+            }, 1000, 'easeInCubic');
+            $(".bolang2").animate({
+                "bottom": "0"
+            }, 1000, 'easeInCubic');
+
+            $(".bolang2").animate({
+                "bottom": "-24px"
+            }, 1000, 'easeInCubic');
+            $(".bolang2").animate({
+                "bottom": "0"
+            }, 1000, 'easeInCubic');
+        },
+
+    }
+    setInterval(yueAnimate.lbyFun, 6000);
+    setInterval(yueAnimate.btntop, 2000);
+
+    var gotoAnchor = function (selector, isauto) {
+        var anchor = $(selector);
+        if (anchor.length < 0) return;
+        var $win = $(window);
+        var $body = $(window.document.documentElement);
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("webkit") > -1) {
+            $body = $(window.document.body)
+        }
+        var pos = anchor.offset();
+        if (isauto) {
+            var t = pos.top - $win.scrollTop(); //相对于屏幕显示区
+            var t2 = $win.height() - t;
+            if (t2 < anchor.outerHeight()) {
+                $body.animate({ "scrollTop": pos.top }, "normal");
+            }
+            return;
+        }
+        $body.animate({ "scrollTop": pos.top }, { queue: false, complete: function () { shubiao = true; } });
+    }
+    yueAnimate.lbyFun();
+</script>
+</body>
+</html>
