@@ -166,7 +166,7 @@ body{width:100%;min-height:100%;background-image:url(./image/bg09.jpg);backgroun
 
 /**
  *============================
- *对bootstrap的补全或覆盖
+ *对bootstrap的补全或覆盖 
  *============================
  */
 .table thead,.table tfoot{background:#ebebeb;}
